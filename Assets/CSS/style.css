@@ -51,6 +51,8 @@
     line-height: 500%;
 }
 
+
+/* Styles the elements that the user can type in */
 .textBoxes {
     border-style: hidden solid solid hidden;
     height: 100px;
@@ -58,9 +60,24 @@
 }
 
 
+/* Styles the container for the lock icons */ 
 .lockBoxes {
     border-style: hidden hidden solid hidden;
     height: 100px;
     background-color: lightskyblue;
     border-radius: 0px 25px 25px 0px;
+}
+
+
+/* Styles the lock icons themselves */
+.lock {
+    font-size:500%;
+    color: black;
+    margin-left: 33%;
+    margin-top: 5%;
+}
+
+/* Makes it so that the locks turn grey when hovered over */
+.lock:hover {
+    color: slategray
 }

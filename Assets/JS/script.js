@@ -1,8 +1,8 @@
 //Getting elements from out html to use in javascript
 
-var scheduleContainerEL = $('#scheduleContainer')
-var timeContainerEL = $('#timesContainer')
-var textContainerEL = $('#textContainer')
+var scheduleContainerEL = $('#scheduleContainer') //selects the entire schedule container
+var timeContainerEL = $('#timesContainer') //selects the times on the left inside the container
+var textContainerEL = $('#textContainer') //selects the text boxes in the middle of the container
 
 var nineAM = $('#9amText')
 var tenAM = $('#10amText') 
@@ -14,6 +14,16 @@ var threePM = $('#3pmText')
 var fourPM = $('#4pmText')
 var fivePM = $('#5pmText')
 
+
+var nineLock = $('#nineLock')
+var tenLock = $('#tenLock')
+var elevenLock = $('#elevenLock')
+var twelveLock = $('#twelveLock')
+var oneLock = $('#oneLock')        //selects the lock icons individually 
+var twoLock = $('#twoLock')
+var threeLock = $('#threeLock')
+var fourLock = $('#fourLock')
+var fiveLock = $('#fiveLock')
 
 //Variables we'll use later
 
@@ -152,4 +162,15 @@ else if (hour == 17) {
 else {
     $(fivePM).css('background-color', 'grey')
 }
+
+
+
+
+//when clicked the locks should turn red
+function saveNote(event) {
+    $(nineLock).css('color', 'red')
+}
+
+
+nineLock.addEventListener('click', saveNote());
 
