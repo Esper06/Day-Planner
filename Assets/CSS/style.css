@@ -1,11 +1,66 @@
+/* Standard styling to all elements */
+
 * {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+
+/* Centers elements targeted by it */
 
 .center {
     text-align: center;
 }
 
+/* Colours text blue */
+
 .blueText {
     color: blue;
+}
+
+
+/* Styles the container that has all the times and comments in */
+
+#scheduleContainer {
+    display: grid;
+    grid-template-areas: 
+    "timesContainer textContainer lockContainer"
+    "timesContainer textContainer lockContainer"
+    "timesContainer textContainer lockContainer"
+    "timesContainer textContainer lockContainer"
+    "timesContainer textContainer lockContainer"
+    "timesContainer textContainer lockContainer"
+    "timesContainer textContainer lockContainer"
+    "timesContainer textContainer lockContainer"
+    "timesContainer textContainer lockContainer";
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 20% 60% 20%;
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+}
+
+
+/* Styles the elements that have the times in them (e.g: 9am, 10am, etc) I wanted them to have a border */
+
+.timeBoxes {
+    border-style: hidden solid solid hidden;
+    height: 100px;
+    line-height: 500%;
+}
+
+.textBoxes {
+    border-style: hidden solid solid hidden;
+    height: 100px;
+    line-height: 500%;
+}
+
+
+.lockBoxes {
+    border-style: hidden hidden solid hidden;
+    height: 100px;
+    background-color: lightskyblue;
+    border-radius: 0px 25px 25px 0px;
 }

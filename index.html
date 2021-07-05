@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day Planner</title>
 
-<link rel="stylesheet" href="./Assets/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
 
 </head>
 <body>
@@ -16,13 +17,56 @@
         <p>A simple calender for scheduling your work day</p>
     </header>
     <div class="center"><span id="todaysDate" class="blueText">Placeholder Text</span></div>
+<hr>
 
     <div id="scheduleContainer">
 
+        <!-- Div container for the times -->
+        <div id="timesContainer">
+            <div id="9am" class="timeBoxes">9AM</div>
+            <div id="10am" class="timeBoxes">10AM</div>
+            <div id="11am" class="timeBoxes">11AM</div>
+            <div id="12pm" class="timeBoxes">12PM</div>
+            <div id="1pm" class="timeBoxes">1PM</div>
+            <div id="2pm" class="timeBoxes">2PM</div>
+            <div id="3pm" class="timeBoxes">3PM</div>
+            <div id="4pm" class="timeBoxes">4PM</div>
+            <div id="5pm" class="timeBoxes">5PM</div>
+        </div>
+
+        <!-- Div container for the text-boxes -->
+        <div id="textContainer">  <!-- contenteditable allows users to type in the text boxes -->
+            <div id="9amText" class="textBoxes" contenteditable="true"></div>
+            <div id="10amText" class="textBoxes" contenteditable="true"></div>
+            <div id="11amText" class="textBoxes" contenteditable="true"></div>
+            <div id="12pmText" class="textBoxes" contenteditable="true"></div>
+            <div id="1pmText" class="textBoxes" contenteditable="true"></div>
+            <div id="2pmText" class="textBoxes" contenteditable="true"></div>
+            <div id="3pmText" class="textBoxes" contenteditable="true"></div>
+            <div id="4pmText" class="textBoxes" contenteditable="true"></div>
+            <div id="5pmText" class="textBoxes" contenteditable="true"></div>
+        </div>
+
+        <!-- Div container for the locks -->
+        <div id="lockContainer">
+            <div class="lockBoxes"></div>
+            <div class="lockBoxes"></div>
+            <div class="lockBoxes"></div>
+            <div class="lockBoxes"></div>
+            <div class="lockBoxes"></div>
+            <div class="lockBoxes"></div>
+            <div class="lockBoxes"></div>
+            <div class="lockBoxes"></div>
+            <div class="lockBoxes"></div>
+        </div>
+
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="./Assets/JS/script.js"></script>
 
 </body>
 
-<script src="./Assets/JS/script.js"/>
+
 
 </html>
