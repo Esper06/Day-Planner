@@ -81,3 +81,12 @@
 .lock:hover {
     color: slategray
 }
+
+
+/* Resizes the lock icons on smaller screens, and moves them to the center of the container */
+@media screen and (max-width: 900px) {
+    .lock {
+        font-size: 200%;
+        margin-top: 80%;
+    }
+}

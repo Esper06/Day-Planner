@@ -171,49 +171,96 @@ else {
 //9am lock
 function saveNote9(event) {
     $(nineLock).css('color', 'red')
-    localStorage.setItem("9amText", nineAM.innerhtml)
+
+    localStorage.setItem("9amText", nineAM.html())
 }
 
 //10am Lock
 function saveNote10(event) {
     $(tenLock).css('color', 'red')
+
+    localStorage.setItem("10amText", tenAM.html())
 }
 
 //11am Lock
 function saveNote11(event) {
     $(elevenLock).css('color', 'red')
+
+    localStorage.setItem("11amText", elevenAM.html())
 }
 
 //12PM Lock
 function saveNote12(event) { 
     $(twelveLock).css('color', 'red')
+
+    localStorage.setItem("12pmText", twelvePM.html())
 }
 
 //1PM Lock
 function saveNote1(event) {
     $(oneLock).css('color', 'red')
+
+    localStorage.setItem("1pmText", onePM.html())
 }
 
 //2PM Lock
 function saveNote2(event) {
     $(twoLock).css('color', 'red')
+
+    localStorage.setItem("2pmText", twoPM.html())
 }
 
 //3PM Lock
 function saveNote3(event) {
     $(threeLock).css('color', 'red')
+
+    localStorage.setItem("3pmText", threePM.html())
 }
 
 //4PM Lock
 function saveNote4(event) {
     $(fourLock).css('color', 'red')
+
+    localStorage.setItem("4pmText", fourPM.html())
 }
 
 //5PM Lock
 function saveNote5(event) {
     $(fiveLock).css('color', 'red')
+
+    localStorage.setItem("5pmText", fivePM.html()) 
 }
 
+
+//This function will retrieve any previously saved text and append it to the element it was saved in
+function showSaved () {
+    retrievedTextNine = localStorage.getItem("9amText")
+    nineAM.html(retrievedTextNine)
+
+    retrievedTextTen = localStorage.getItem("10amText")
+    tenAM.html(retrievedTextTen)
+
+    retrievedTextEleven = localStorage.getItem("11amText")
+    elevenAM.html(retrievedTextEleven)
+
+    retrievedTextTwelve = localStorage.getItem("12pmText")
+    twelvePM.html(retrievedTextTwelve)
+
+    retrievedTextOne = localStorage.getItem("1pmText")
+    onePM.html(retrievedTextOne)
+
+    retrievedTextTwo = localStorage.getItem("2pmText")
+    twoPM.html(retrievedTextTwo)
+
+    retrievedTextThree = localStorage.getItem("3pmText")
+    threePM.html(retrievedTextThree)
+
+    retrievedTextFour = localStorage.getItem("4pmText")
+    fourPM.html(retrievedTextFour)
+
+    retrievedTextFive = localStorage.getItem("5pmText")
+    fivePM.html(retrievedTextFive)
+}
 
 
 $(nineLock).click(saveNote9);
@@ -225,3 +272,5 @@ $(twoLock).click(saveNote2);
 $(threeLock).click(saveNote3);
 $(fourLock).click(saveNote4);
 $(fiveLock).click(saveNote5);
+
+showSaved();
