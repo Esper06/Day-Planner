@@ -166,11 +166,62 @@ else {
 
 
 
-//when clicked the locks should turn red
-function saveNote(event) {
+//functions for all locks, when clicked they should turn red and save the text in the div they're inside
+
+//9am lock
+function saveNote9(event) {
     $(nineLock).css('color', 'red')
+    localStorage.setItem("9amText", nineAM.innerhtml)
+}
+
+//10am Lock
+function saveNote10(event) {
+    $(tenLock).css('color', 'red')
+}
+
+//11am Lock
+function saveNote11(event) {
+    $(elevenLock).css('color', 'red')
+}
+
+//12PM Lock
+function saveNote12(event) { 
+    $(twelveLock).css('color', 'red')
+}
+
+//1PM Lock
+function saveNote1(event) {
+    $(oneLock).css('color', 'red')
+}
+
+//2PM Lock
+function saveNote2(event) {
+    $(twoLock).css('color', 'red')
+}
+
+//3PM Lock
+function saveNote3(event) {
+    $(threeLock).css('color', 'red')
+}
+
+//4PM Lock
+function saveNote4(event) {
+    $(fourLock).css('color', 'red')
+}
+
+//5PM Lock
+function saveNote5(event) {
+    $(fiveLock).css('color', 'red')
 }
 
 
-nineLock.addEventListener('click', saveNote());
 
+$(nineLock).click(saveNote9);
+$(tenLock).click(saveNote10);
+$(elevenLock).click(saveNote11);
+$(twelveLock).click(saveNote12);
+$(oneLock).click(saveNote1);      //These all run the function to save the notes on click for each individual lock
+$(twoLock).click(saveNote2);
+$(threeLock).click(saveNote3);
+$(fourLock).click(saveNote4);
+$(fiveLock).click(saveNote5);
